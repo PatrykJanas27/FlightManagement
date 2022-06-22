@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3307/DB_NAME
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username:
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  sql:
+    init:
+      mode: always
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
